@@ -10,6 +10,7 @@
 import java.util.*;
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.util.PriorityQueue;
 
 public class main {
     public static void main (String[] args) {
@@ -42,10 +43,23 @@ public class main {
         VectorHeap<Paciente> vectorHeap = new VectorHeap<>(vector);
 
         int cont = vectorHeap.size();
-        //Se muestra en pantalla el orden de los pacientes segun su prioridad
+        //Se muestra en pantalla el orden de los pacientes segun su prioridad con Heap
+        System.out.println("Utilizando Heap:");
         for (int i = 0; i < cont; i++) {
             Paciente temp = vectorHeap.remove();
-            System.out.println(temp.toString());
+            System.out.println(temp);
+        }
+
+        System.out.println();
+
+        //Se crea un vector de Priority Queue del JCF
+        PriorityQueue<Paciente> jcfVector = new PriorityQueue<>(vector);
+
+        //Se muestra en pantalla el orden de los pacientes segun su prioridad con Priority Queue
+        System.out.println("Utilizando Priority Queue del JCF:");
+        for (int i = 0; i < cont; i++) {
+            Paciente temp = jcfVector.poll();
+            System.out.println(temp);
         }
     }
 }
