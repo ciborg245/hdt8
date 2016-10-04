@@ -17,7 +17,7 @@ public class main {
         Vector<Paciente> vector = new Vector<>();
 
         try {
-            BufferedReader bf = new BufferedReader(new FileReader(System.getProperty("user.dir") + "\\src\\pacientes.txt")); // Direccion donde se encuentra el archivo
+            BufferedReader bf = new BufferedReader(new FileReader(System.getProperty("user.dir") + "\\pacientes.txt")); // Direccion donde se encuentra el archivo
 
             String bfRead;
 
